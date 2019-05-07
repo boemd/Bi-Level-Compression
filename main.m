@@ -28,6 +28,19 @@ dec = decodeRunLengths(runs, h, w);
 dict = huffmandict(huff_symbols, huff_probs);
 comp = huffmanenco(runs,dict);
 dsig = huffmandeco(comp,dict);
+img_rec = decodeRunLengths(dsig, h, w);
+mse = immse(int8(img_rec), int8(img_bin));
 
+if mse~=0
+    disp('An error occurred');
+else
+    comp_ratio = (h*w)/(size(comp, 2) + getDictSize(dict));
+    X = ['Compression Ratio: ',num2str(comp_ratio)];
+    disp(X);    
 
-comp_ratio = (h*w)/(size(comp, 2) + getDictSize(dict))
+    figure(1)
+    subplot(1,2,1), imshow(img_bin)
+    title('Original')
+    subplot(1,2,2), imshow(img_rec)
+    title('Compression')
+end

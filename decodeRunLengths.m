@@ -12,5 +12,6 @@ function img = decodeRunLengths(runs, h, w)
         end
         r = r + 1;
     end
-    img = reshape(img, w, h).';   
+    img = reshape(img, w, h).';
+    img = logical(img);
 end
