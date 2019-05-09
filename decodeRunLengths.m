@@ -1,4 +1,4 @@
-function img = decodeRunLengths(runs, h, w)
+function img = decodeRunLengths(runs, h)
     img = [];
     curr = 1;
     r = 1;
@@ -12,6 +12,6 @@ function img = decodeRunLengths(runs, h, w)
         end
         r = r + 1;
     end
-    img = reshape(img, w, h).';
+    img = reshape(img, [], h).';
     img = logical(img);
 end

@@ -9,11 +9,7 @@ function runs = runLengths(img_bin)
         if r(i)==prec
             count = count + 1;
         else
-            if i ~= 1
-                runs = [runs, count];
-            else
-                runs = [runs, 0];
-            end
+            runs = [runs, count];
             count = 1;
         end
         prec = r(i);
