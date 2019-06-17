@@ -5,6 +5,8 @@ Project for the Source Coding course of the Master's Degree *ICT for Internet an
 
 ## Description
 Compression of bi-level images by coding the run-lengths using the Huffman procedure. 
+Encode a bilevel image using the script **encode.m**.
+Decode an image using the script **decode.m**.
 
 ## Authors
 

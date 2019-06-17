@@ -1,4 +1,5 @@
 function sz = getDictSize(dict)
+% get the size of the dictionary
     sz = 0;
     cwrd_max = 0;
     rl_max = 0;

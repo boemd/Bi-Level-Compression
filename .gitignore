@@ -1,3 +1,11 @@
 #data folder
-data/
+data/png/
+data/prove/
+data/samples/
 old_scripts/
+
+helpers/averageBitsPerPixel.m
+stuff.m
+pngg.m
+
+sizes.xlsx

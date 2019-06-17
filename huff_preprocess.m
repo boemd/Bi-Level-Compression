@@ -1,4 +1,5 @@
 function [huff_symbols, huff_probs] = huff_preprocess(runs)
+% compute the symbol probabilities
     maximum = max(runs);
     huff_symbols = 0:maximum;
     huff_probs = zeros(1, maximum+1);

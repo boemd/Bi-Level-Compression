@@ -1,4 +1,5 @@
 function runs = runLengths(img_bin)
+% count the run lenths of a binary image
     [h, w] = size(img_bin);
     r = reshape(img_bin.', 1, []);
     %start with color white, i.e. 1
@@ -15,6 +16,8 @@ function runs = runLengths(img_bin)
         prec = r(i);
     end
     runs = [runs, count];
+    
+    % error check
     if sum(runs) ~= h*w
         runs = [];
     end
